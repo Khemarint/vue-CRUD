@@ -51,7 +51,7 @@
       async updateRestaurant() {
         try {
           console.warn(this.Restaurant);
-          const response = await axios.put("http://localhost:3000/restaurant", {
+          const response = await axios.put("http://localhost:3000/restaurant/"+this.$route.params.id, {
             name: this.Restaurant.name,
             address: this.Restaurant.address,
             contact: this.Restaurant.contact,
@@ -73,7 +73,7 @@
       } else {
         this.name = JSON.parse(user).name;
       }
-      const result = await axios.get('http://localhost:3000/restaurant')
+      const result = await axios.get('http://localhost:3000/restaurant/'+this.$route.params.id)
     console.warn(result.data)
     this.Restaurant = result.data
     },
