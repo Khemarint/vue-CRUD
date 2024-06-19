@@ -10,14 +10,14 @@ npm install
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Install JSON Server
 ```
-npm run build
+npm install -g json-server
 ```
 
-### Lints and fixes files
+### Start JSON Server
 ```
-npm run lint
+json-server --watch db.json
 ```
 
 ### Customize configuration
